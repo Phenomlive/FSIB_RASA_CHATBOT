@@ -1,0 +1,933 @@
+version: "3.1"
+
+nlu:
+  
+
+  ##
+  # chairman sir of fsib
+  - intent: chairman_info
+    examples: |
+      - who is the chairman of fsib?
+      - i want to know about your bank's chairman.
+      - who leads your bank as independent director?
+      - tell me about the chairman of your bank.
+      - can you share details about the fsib chairman?
+      - biography of chairman sir of fsib plc.
+      - who holds the chairman position at FSIB?
+      - what is the name of your bank's independent director?
+      - When did your independent director joined the bank?
+      
+  ##
+  # MD sir of fsib
+  - intent: md_info
+    examples: |
+      - who is the MD of your bank?
+      - can you tell me about the managing director of your bank?
+      - who leads your bank as managing director?
+      - i want to know about your bank's MD.
+      - who holds the position of managing director at your bank?
+      - provide details about the MD of fsib.
+      - biography of Md or managing director of fsib.
+      - name of the managing director of your bank?
+      - I want to know about your MD.
+      - what is the name of the managing director of your bank?
+  
+  ##
+  # CITO sir info
+  - intent: cito_info
+    examples: |
+      - who is the cito of fsib?
+      - who is the chief information technology officer of your bank?
+      - who looks after the IT department in your bank?
+      - i want to know about the cito of fsib
+      - biography of CITO of fsib.
+      - can you tell me who is the cito of your bank?
+      - who is in charge of IT at fsib?
+      - provide details about the CITO of fsib
+      - what is the name of the chief information technology officer of your bank?
+      - ICT division head of FSIB PLC?
+      - IT division head name.
+      - who is in charge of ict division?
+
+  ##
+  # committee info
+  - intent: committee_info
+    examples: |
+      - what committees does FSIB have, like the Executive Committee?
+      - tell me about the Audit Committee at FSIB.
+      - who are part of executive committee?
+      - I need to talk to executive committee members.
+      - what does the Risk Management Committee do at FSIB?
+      - I want detailed info about audit committee.
+      - who leads the audit committee
+      - who is in the Executive Committee at FSIB?
+      - how does the Audit Committee work at FSIB?
+      - tell me what is risk management committee in your bank?
+      - what does the Risk Management Committee handle at FSIB?
+      - how are the committees like Executive, Audit, and Risk Management organized at FSIB?
+      - which committees make decisions at FSIB?
+      - all the committe of fsib?
+      - comittes of fsib bank
+      
+
+
+
+
+
+
+  # senior citized data modified
+  ##
+  - intent: senior_citizen_account
+    examples: |
+      - What is the FSIB account for elderly individuals?
+      - How does FSIB's golden years savings account function?
+      - What benefits does your bank offer for retirees through their savings account?
+      - What is the eligibility to open an account for older adults?
+      - can you name a account for my grandmother?
+      - Does FSIB provide special profit rates for retired citizens?
+      - Can retirees access free debit cards with FSIB's pensioner account?
+      - What facilities are included in FSIB's retirement savings account?
+      - Is the FSIB account for senior adults available with locker discounts?
+      - Are internet and SMS banking services offered for FSIB's elderly account holders?
+      - What are the requirements for opening FSIB's account for older customers?
+      - what account does your bank offer for senior citizens?
+      - Are there any special account for people above sixty?
+      - i need an account for my grand father.
+      - Does this offer a special account for my father after retirement?
+      - What kind of account can I open for my elderly mother at this bank?
+      - Is there a special savings account for my grandparents?
+      - Can I open an account for my retired father at FSIB with additional benefits?
+      - Are there any benefits for grandparents in your bank account?
+      - Which account is suitable for my dad?
+
+  # family account modified data
+  ##
+  - intent: family_account
+    examples: |
+      - What is a Family Account?  
+      - How does a Family Account work?  
+      - What are the benefits of a Family Account?  
+      - What do I need to open a Family Account?  
+      - Can I withdraw money from a Family Account anytime?  
+      - Is there a minimum balance for a Family Account?  
+      - Is a Family Account Shariah-compliant?  
+      - Are there any fees for a Family Account?  
+      - How can I close a Family Account?  
+      - Can I transfer money from a Family Account to another account?
+      - What is a joint family account in FSIB?
+      - How can I manage a Family Account with multiple users?
+      - Can I link my Family Account to mobile banking for easy access?
+      - Is there any limit on withdrawals from a Family Account in a month?
+      - How do I add or remove a member from my Family Account?
+  - intent: mudaraba_scheme_account
+    examples: |
+      - What is a Mudaraba Scheme Account?
+      - How does a Mudaraba Scheme Account work?
+      - What are the benefits of a Mudaraba Scheme Account?
+      - What are the requirements to open a Mudaraba Scheme Account?
+      - Can I withdraw funds from a Mudaraba Scheme Account anytime?
+      - What is the profit-sharing ratio in a Mudaraba Scheme Account?
+      - How is the profit calculated in a Mudaraba Scheme Account?
+      - Is there a minimum balance requirement for a Mudaraba Scheme Account?
+      - Can I open a Mudaraba Scheme Account for my business?
+      - What are the differences between a Mudaraba Scheme Account and a regular savings account?
+      - Is a Mudaraba Scheme Account Shariah-compliant?
+      - What documents are needed to open a Mudaraba Scheme Account?
+      - Are there any fees for maintaining a Mudaraba Scheme Account?
+      - How do I close a Mudaraba Scheme Account?
+      - Can I transfer funds from a Mudaraba Scheme Account to another bank account?
+  # student account modified data
+  ##
+  - intent: student_account
+    examples: |
+      - What are the features of the student account offered by FSIB?
+      - How can I open a student account with FSIB?
+      - What documents are required to open a student account with FSIB?
+      - Is an initial deposit required for a student account with FSIB?
+      - Can I manage my student account online through FSIB?
+      - What are the benefits of having a student account at FSIB?
+      - How do I activate my student account with FSIB?
+      - Is here any special account for madrasha student?
+      - What is the eligibility criteria for opening a student account with FSIB?
+      - Are there any fees associated with a student account at FSIB?
+      - How can I access banking services with my student account at FSIB?
+      - minimum account balance needed for student account?
+      - I want to open a student account.
+      - student account.
+      - I am a madrasha student suggest me an account.
+      - What features does the FSIB student account offer?
+      - Can a student account at FSIB be used internationally?
+      - How can I transfer funds from my student account at FSIB?
+      - Are there any special offers for students opening an account at FSIB?
+
+      
+  - intent: praise_words
+    examples: |
+      - Thank you.
+      - Thanks.
+      - Great job.
+      - Thanks for your help.
+      - Thank you very much.
+      - I am very glad you helped me.
+  - intent: foreign_currency_details_scheme
+    examples: |
+      - What are the details of the [Private Foreign Currency](scheme_name) account?  
+      - Tell me about the benefits of the [Non-Resident Foreign Currency Deposit](scheme_name).  
+      - How does the [Export Retention Quota](scheme_name) account work?  
+      - Can you give information about the [Resident Foreign Currency Deposit](scheme_name) account?  
+      - What is the purpose of the [PFC](scheme_name) account?  
+      - Is the [RFCD](scheme_name) account good for people earning in foreign currency?  
+      - Why is the [ERQ](scheme_name) account helpful for exporters?  
+      - Does the [NITA](scheme_name) account support foreign investors?  
+      - How does the [NFCD](scheme_name) account help with savings?  
+      - What makes the [NITA](scheme_name) account useful for non-residents?  
+      - How can I open a [PFC](scheme_name)?  
+      - What are the special features of the [NFCD](scheme_name)?  
+      - Why should exporters choose the [ERQ](scheme_name)?  
+      - Does the [Private Foreign Currency](scheme_name) account offer multi-currency options?  
+      - What are the unique benefits of the [RFCD](scheme_name)?   
+
+  - intent: mudaraba_term_details_scheme
+    examples: |
+      - Can you tell me about [Mudaraba Term Deposit Scheme](scheme_name)?
+      - What are the benefits of the [Mudaraba Monthly Profit Scheme](scheme_name)?
+      - Give me details about the [FSIB Murobbi](scheme_name) scheme.
+      - What is the [Mahiyasi](scheme_name) about?
+      - How does the [FSIB Sanchay](scheme_name) account work?
+      - Explain the features of the [Mudaraba Deposit Double Scheme](scheme_name).
+      - tell me about [MDDS](scheme_name).
+      - What is the purpose of the [Utshob](scheme_name)?
+      - Share details about the [Mudaraba Smart Deposit Double Scheme](scheme_name).
+      - What are the advantages of the [Mudaraba Term Deposit Century](scheme_name)?
+      - Can you describe the [Mudaraba Term Deposit Double Century](scheme_name)?
+      - How can i open [double century](scheme_name) account?
+      
+  - intent: mudaraba_scheme_account_details_scheme
+    examples: |
+      - Tell me about the [Niramoy](scheme_name) scheme.
+      - What is the [Agroshor](scheme_name) account?
+      - Explain the [Durbar](scheme_name) savings plan.
+      - How does the [Ehsan](scheme_name) account work?
+      - What is the [Bondhon](scheme_name) account?
+      - Give me details of the [Ghoroni](scheme_name) scheme.
+      - What are the benefits of the [Haj](scheme_name) account?
+      - How can I open a [Musafir](scheme_name) account?
+      - What is the [Sanchaye Shukh](scheme_name) account?
+      - Tell me about the [Merchant](scheme_name) savings account.
+      - How does the [FSIB Care](scheme_name) work?
+      - What is the [Cash Waqf](scheme_name) account?
+      - What are the profit rates in [Niramoy](scheme_name)?
+      - How to open a [Agroshor](scheme_name) account?
+      - Can I get a loan with [Durbar](scheme_name)?
+      - Does [Ehsan](scheme_name) account offer retirement benefits?
+      - Is [Bondhon](scheme_name) account for joint savings?
+      - What is special about the [Ghoroni](scheme_name) scheme?
+      - Does [Haj](scheme_name) account offer travel benefits?
+      - What are the conditions for the [Musafir](scheme_name) account?
+      - How can I save for my business in the [Merchant](scheme_name) account?
+      - What are the rules for withdrawal in [FSIB Care](scheme_name)?
+      - How does [Cash Waqf](scheme_name) scheme work for charity?
+
+      
+  - intent: al_wadiah_details_scheme
+    examples: |
+      - What is the [Current Deposit](scheme_name) account in FSIBL?
+      - Can you tell me about the [Current Deposit](scheme_name) account?
+      - How does the [Current Deposit](scheme_name) account work?
+      - What are the features of the [Shomman](scheme_name) scheme in this bank?
+      - Tell me about the benefits of the [Shomman](scheme_name) deposit account.
+      - What is the [Shomman](scheme_name) account, and how can I use it?
+      - Explain the details of the [Morjada](scheme_name) account.
+      - What services are available in the [Morjada](scheme_name)?
+      - How can I open a [Morjada](scheme_name) account in FSIBL?
+      - What are the advantages of the [Current Deposit](scheme_name) acocunt?
+      - Is the [Shomman](scheme_name) account suitable for savings?
+      - Does the [Morjada](scheme_name) bank account follow Islamic banking rules?
+      - Can you explain how the [Current Deposit](scheme_name) account is different from others?
+      - Is there a profit-sharing option in the [Shomman](scheme_name) account?
+      - Who can apply for the [Morjada](scheme_name) account?
+      - tell me [shomman](scheme_name) account.
+
+  - intent: mudaraba_savings_details_scheme
+    examples: |
+      - What is the [Savings](scheme_name) account?
+      - Tell me about [Onkur](scheme_name).
+      - Can you explain the features of the [Projonmo](scheme_name)?
+      - What are the benefits of the [Prapti](scheme_name)?
+      - How does the [Probin](scheme_name) work?
+      - Is the [Mehonoty](scheme_name) Shariah-compliant?
+      - How is the [SND](scheme_name) different from a regular account?
+      - tell me about (fsib smart account](scheme_name).
+      - Can I get any profit from the [Savings](scheme_name)?
+      - Give me information about [Savings](scheme_name).
+      - What types of [Onkur](scheme_name) are available?
+      - Tell me about [Prapti](scheme_name).
+      - What are the features of [Probin](scheme_name)?
+      - I need details about the [Mehonoty](scheme_name) account.
+      - How does the [SND](scheme_name) differ?
+      - Can you explain the [Smart Account](scheme_name) benefits?
+      - How can i open [short notice deposit](scheme_name) account?
+      - What is [Smart Account](scheme_name)?
+
+  - intent: scheme_general
+    examples: |
+      - What is a scheme?
+      - How does a scheme work?
+      - Can you tell me the benefits of a scheme?
+      - Is a scheme Shariah-compliant?
+      - How is a scheme different from a regular account?
+      - Who is responsible for any losses in a scheme?
+      - Can I get any profit from a scheme?
+      - Give me information about schemes
+      - What types of schemes are available?
+      - Tell me about bank schemes
+  - intent: foreign_currency_account
+    examples: |
+      - What is a Foreign Currency Account?
+      - Can you explain the features of a Foreign Currency Account?
+      - What are the advantages of having a Foreign Currency account as a freelancer?
+      - How does a Foreign Currency Account operate?
+      - What are the eligibility criteria for opening a foreign currency account in Bangladesh?
+      - Is a Foreign Currency Account compliant with Shariah principles?
+      - How is a Foreign Currency Account different from regular accounts?
+      - Who bears the risk of losses in a Foreign Currency Account?
+      - Suggested account for freelancers.
+      - Account for exporters?
+      - Can ICT service exporters, such as software developers or data processors, open a Foreign Currency Account?
+      - Can all non-resident Bangladeshi nationals open a Foreign Currency Account?
+      - Are persons of Bangladeshi origin with dual nationality eligible for a Foreign Currency Account?
+      - Tell me about Foreign Currency Accounts.
+      - Information on Foreign Currency Accounts.
+      - i am a youtuber which account is better for me?
+      - who can open a foreign currency account?
+      - 
+  - intent: al_wadiah_account
+    examples: |
+      - What is an Al-Wadiah Account?
+      - Can you explain the features of an Al-Wadiah Account?
+      - What benefits does an Al-Wadiah Account offer?
+      - How does an Al-Wadiah Account work in Islamic banking?
+      - Is an Al-Wadiah Account Shariah-compliant?
+      - What makes an Al-Wadiah Account different from other accounts?
+      - Who is responsible for losses in an Al-Wadiah Account?
+      - Can I earn any profit from an Al-Wadiah Account?
+
+  - intent: mudaraba_general
+    examples: |
+      - What is Mudaraba?
+      - Tell me about Mudaraba.
+      - What does Mudaraba mean?
+      - How does Mudaraba work?
+      - Can you explain Mudaraba?
+      - What are the benefits of Mudaraba?
+      - What are the features of Mudaraba?
+
+# here was mudaraba term deposit i have removed it.
+  - intent: mudaraba_savings_account
+    examples: |
+      - What is a Mudaraba Savings Account?
+      - Can you explain the features of the Mudaraba Savings Account?
+      - What are the benefits of opening a Mudaraba Savings Account?
+      - Tell me about the Mudaraba Savings Account and its advantages.
+      - How does the Mudaraba Savings Account work?
+      - What are the key features of the Mudaraba Savings Account?
+      - Could you provide details on the Mudaraba Savings Account?
+      - What makes the Mudaraba Savings Account unique?
+      - Benefits of the Mudaraba Savings Account?
+
+  - intent: account_types
+    examples: |
+      - What types of accounts are available?
+      - Your banks available products?
+      - Tell me about the different account options.
+      - Can you explain the account plans?
+      - What types of account does this bank offer?
+      - What are the availabe account opportunities?
+      - I want a product of your bank.
+      - could you list the types of accounts?
+      - I need information on account options.
+      - What kinds of accounts can I open?
+      - What account plans do you provide?
+      - Please explain your account options.
+      - what types of products do you offer?
+      
+
+  - intent: open_account
+    examples: |
+      - I would like to open a Mudaraba Savings account.
+      - Could you guide me through the process of creating an Al Wadiah Account?
+      - How can I start a Foreign Currency Account?
+      - What steps are involved in opening a Mudaraba Term Deposit account?
+      - I need assistance to create a Mudaraba Scheme account.
+      - Can you explain how to open a Mudaraba Savings account?
+      - Is it possible to open a new Al-Wadiah account?
+      - How can i create an account in your bank?
+      - what is the process of creating an online bank account?
+      - What do I need to do to open a Foreign Currency Account?
+      - Can you walk me through opening a Mudaraba Term Deposit Account?
+      - How do I get started with opening a Mudaraba Scheme Account?
+      - I am interested in opening a new account.
+      - I want to create a deposit account.
+      - I want to open a savings account.
+      - I want to open an account.
+
+  - intent: greetings
+    examples: |
+      - Hello
+      - Hi
+      - Hey there
+      - Good morning
+      - Good evening
+      - Good afternoon
+      - How are you?
+      - How do you do?
+      - I need your help.
+      - Can you help me?
+      - assalamu alaikum
+      - As-salaam alaikum
+      - assalamualaikum
+
+  - intent: goodbye
+    examples: |
+      - Goodbye
+      - See you later
+      - Bye
+      - Take care
+      - Have a nice day
+  
+# fsib card info modified
+##
+#fsib card part
+
+  - intent: fsib_card_info
+    examples: |
+      - Tell me about the FSIB Card
+      - Can i get a free atm card for opening a new account?
+      - What is the FSIB Card?
+      - tell me the steps of getting a credit card.
+      - Can you provide details about FSIB Card?
+      - I want to know about FSIB Card
+      - Help me with FSIB Card information
+      - do you have credit card?
+      - what are the requirements of getting a credit card
+      - i want to get an atm card.
+      - how can i avail an atm card of your bank
+      - fsib card usage and benefits?
+      - visa platinum card of fsib.
+      - Where can i use your visa platinum card
+
+# all deposit accounts details
+##
+  - intent: fsib_deposit_accounts
+    examples: |
+      - What are the types of deposit accounts?
+      - List the deposit accounts available.
+      - I want to open a FDR.
+      - Tell me about deposit accounts of fsib.
+      - What deposit accounts do you have?
+      - Fixed Deposit Receipt account?
+      - Can you explain deposit accounts?
+      - What are the different deposit accounts?
+      - Give details about deposit accounts of fsib.
+      - What deposit accounts can I open?
+      - What types of deposit accounts are there?
+      - FDR account?
+      - MTDR account?
+      - i need info about fsib savings deposit
+      - i want to know about FDR/term deposit.
+      - Can you name the deposit accounts?
+      - Tell me about savings deposit and term deposit accounts.
+      - What is a savings deposit account?
+      - Explain term deposit accounts offered by your bank.
+      - What are FDR, MTDR, and fixed deposit accounts?
+      - What are the features of savings and term deposit accounts?
+      - How can I open a term deposit account at FSIB?
+      - Do you have any accounts for long-term savings?
+      - What is the difference between a savings deposit and an FDR?
+      - Can I earn interest on a savings deposit account at FSIB?
+      - Are there any fixed deposit options for individuals?
+      - Tell me the process for opening an MTDR account.
+      - Do you offer special deposit accounts for high returns?
+      - Is there a minimum balance requirement for savings accounts at FSIB?
+      - What deposit accounts are available for regular savings?
+      - How do FSIB fixed deposit accounts work?
+ # salary account prapti
+ ##      
+  - intent: fsib_salary_account
+    examples: |
+      - Is there any specific account for office employees?
+      - which account is better for corporate executives and officers?
+      - Do you have any account that is better salary distribution?
+      - can compaines use any account to pay employees?
+      - are there any benefits for corporate officers?
+      - which account support salary payment for private sector employees?
+      - what account is better for me if i work in a office?
+      - Is there a salary savings account?
+      - Can an employee's monthly salary be directly deposited into any account?
+      - Does fsib offer any account for salary distribution?
+      - fsib mudaraba salary saving account?
+      - I am a corporate employee suggest me an account?
+  ##
+  # contains some redundancy
+  # best account for organizations
+  - intent: fsib_organization_account
+    examples: |
+      - Which bank account is best for proprietorship firms?
+      - Can a partnership firm open any account for its benefit in fsib?
+      - What account is suitable for private limited companies?
+      - Can public limited companies use an account in your bank?
+      - Which account can an educational institution open?
+      - Is there an account for clubs in fsib?
+      - Can associations open any special type of account?
+      - Which account suits socio economic organizations?
+      - What type of account can a limited company open?
+      - Does FSIB offer an account suitable for both private and public companies?
+      - Suggest me a corporate savings account.
+      - Do you have corporate savings deposit account?
+      - Is there any product giving extra facilities to corporate firms? 
+
+##
+# FSIB housewife account
+  - intent: fsib_women_account
+    examples: |
+      - Do you offer any special account for females?
+      - Is there an account for girls only?
+      - What accounts are available for my sister at your bank?
+      - Does FSIB provide any housewife specific accounts?
+      - Can women open a special account at fsib?
+      - Are there accounts with benefits for housewives?
+      - I have to open an account for my aunt.
+      - What are the features of women centric account?
+      - Is there a female savings account at FSIB?
+      - Are there any discounts or benefits on FSIB accounts for housewives?
+      - How can women open an account with FSIB?
+      - Suggest me an account for my wife?
+      - As a girl which account is better for me?
+      - which account is better for a motherly figure?
+      - tell me about an account that will be better for my mrs.
+    
+# low income people account 
+  - intent: lowincome_account
+    examples: |
+      - Is there a special account for garments workers to save their earnings?
+      - How can rickshaw pullers benefit from FSIB's low-income banking services?
+      - Does FSIB offer accounts tailored for farmers to manage their savings?
+      - Are there any banking schemes suitable for hawkers with irregular incomes?
+      - As a lower middle class person which account should i choose?
+      - What are the features of a savings account designed for low-income individuals?
+      - Can a farmer open an account with minimal documentation at your bank?
+      - How does FSIB support rickshaw pullers with affordable banking options?
+      - Suggest me an account for garments workers?
+      - As a garment worker which account shall i choose?
+      - Best account for low income people.
+      - which product do you have for lower middle class people?
+
+# account for marriage benefits
+  - intent: marriage_account
+    examples: |
+      - Is there a savings plan to help with marriage costs?
+      - Which account is best for marriage plans?
+      - Matrimony help-related account of your bank.
+      - For FSIB, can an account cover childrens wedding costs?
+      - What account is good for saving money for a wedding?
+      - Does your bank have a plan for marriage expenses?
+      - Can I open a savings account for future marriage costs?
+      - How does your bank help with managing marriage-related expenses?
+      - I need marriage related help.
+
+# health support related account
+  - intent: health_support_account
+    examples: |
+      - Does your bank have any savings account for medical expenses?
+      - What is the best account for health support in your bank?
+      - Is there a scheme to help with hospital bills in fsib plc?
+      - How can I save money for future healthcare needs?
+      - Does your bank offer a plan to cover surgery costs?
+      - What type of FSIB account helps with medical emergencies?
+      - Is there a healthcare savings plan for families?
+      - How does your bank support customers with medical expenses?
+      - FSIB health care support related scheme?
+      - FSIB's best account scheme for medical support?
+
+
+
+
+
+
+# fuad part main
+  - intent: fsib_investment
+    examples: |
+      - What investment plans do you offer?
+      - Tell me about FSIB investment options
+      - What are the different investment schemes?
+      - Can you show me the investment plans?
+      - I want to know about investment opportunities
+      - What are the ways to invest in FSIB?
+      - How can I invest money with fsib?
+      - What options do you have for investments?
+      - I want to invest, tell me the details.
+      - Do you have any long term investment plans?
+      - What is the minimum amount to start an investment?
+      - Can I get details of high return investments?
+      - I want to invest my money?
+      - Suggest me all the options for investment.
+      - Are there any risk free investment options?
+      - Can I get details of low risk investments?
+  # confusing for now
+  - intent: fsib_trading_mode
+    examples: |
+      - What are the trading modes?
+      - Tell me about the trading modes
+      - What are the trading options?
+      - What are the trading plans?
+      - fsib trading options
+      - I want to trade with FSIB
+      - Bai Mechanism
+      - Bai-Mechanism
+      - Bai-Murabaha
+      - Murabaha
+      - Bai-Muazzal
+      - Muazzal
+      - Bai-Salam
+      - Bai-Istishna
+      - Istishna
+ 
+  - intent: fsib_partnership_mode
+    examples: |
+      - What are the partnership modes?
+      - Tell me about the partnership modes
+      - What are the partnership options?
+      - What are the partnership opportunities?
+      - What are the partnership plans?
+      - fsib partnership
+      - fsib partnership options
+      - I want to partner with FSIB
+      - share mechanism
+      - what are the share mechanisms
+      - Musharakah
+      - Musharakah mechanism
+
+  - intent: fsib_leasing_mode
+    examples: |
+      - What are the leasing modes?
+      - Tell me about the leasing modes
+      - What are the leasing options?
+      - rental options
+      - rental investment
+      - fsib leasing
+      - fsib leasing options
+      - I want to lease from FSIB
+      - Ijara Mechanism
+      - what are the Ijara mechanisms
+      - Shirkatul Melk
+      - which investment mode is suitable for share in ownership
+      - HPSM
+      - Hire Purchase under Shirkatul Melk
+
+  - intent: fsib_quard
+    examples: |
+      - What is Quard?
+      - Tell me about Quard
+      - quard
+      - quard-e-hasana
+      - quard e hasana
+      - Quard mechanism
+      - investment without profit
+
+  #Fuad
+  #Services
+  # confusing and modified
+  - intent: fsib_services
+    examples: |
+      - What services do you offer?
+      - Tell me about the benefits
+      - Do you provide inter bank fund transfer services?
+      - Can I transfer money to another bank using FSIB?
+      - What is IBFT?
+      - Do you offer SWIFT transactions?
+      - Can I use SWIFT services at fsib?
+      - How can I pay utility services through FSIB?
+      - Do you provide utility facilities?
+      - Can I make E-GP payments through FSIB?
+      - What are E-GP payment services?
+      - How much benefit will i get if i use your services?
+      - I want to attend hajj I need your service.
+      - Do you offer E-Hajj services?
+      - Can I pay for Hajj-related expenses via fsib plc?
+      - Do you have locker services available?
+      - How can I avail locker facility at FSIB?
+      - What is Tasdir and do you provide it?
+      - Can I get Tasdir services through your bank?
+      - tell me about the service of this bank.
+
+  - intent: inter_bank_fund_transfer
+    examples: |
+      - What is IBFT?
+      - Do you provide inter-bank fund transfer services?
+      - Can I transfer money to another bank using FSIB?
+      - How can I transfer money to another bank using FSIB?
+      - RTGS
+      - ibft
+      - tell me about ibft
+      - Real Time Gross Settlement
+      - Bangladesh Electronic Funds Transfer Network
+      - BEFTN
+      - BFTN
+      - National Payment Switch Bangladesh
+      - NPSB
+      - IBFT transfer taka or money?
+
+  #Location
+  # modified
+  - intent: fsib_location
+    examples: |
+      - FSIB main branch.
+      - where can i find your sub branch location?
+      - Where is your branch located?
+      - Branch locations near me
+      - give me the location of bank's branches
+      - Where can I find your ATMs?
+      - ATM location of your bank
+      - Location of FSIB customer relationship management branch?
+      - Where is your CRM service?
+      - FSIB collection booth location
+      - How can I find a collection booth?
+      - From where i can cashout my taka?
+      - FSIB agent outlet near me
+      - Where are FSIB agent outlets show me.
+      - Do you have ATM service at branches?
+      - Can I access collection booths in branches?
+      - Where is this banks nearest facility?
+      - where shall i go to deposit my money?
+
+    #Exchange rate
+    # modified
+  - intent: fsib_exchange_rate
+    examples: |
+      - FSIB Exchange Rate
+      - How much is 1 USD today?
+      - What's the value of EUR in exchange?
+      - Can I check today's exchange for GBP?
+      - What's the conversion value for JPY now?
+      - I want the latest currency conversion details
+      - Show me the current rates for foreign currencies.
+      - show me today's exchange rate.
+      - How much is USD compared to BDT?
+      - What's the current worth of EUR in BDT?
+      - Tell me the conversion price of GBP.
+      - Can you give me today's JPY exchange details?
+      - What's the currency value for USD and EUR today?
+      - I would like to know how GBP and JPY compare
+      - I want to convert my taka to dollar.
+      
+
+    #emi calculator
+
+  - intent: fsib_emi_calculator
+    examples: |
+      - EMI Calculator
+      - emi calculator
+      - where is your emi calculator
+      - emi
+      - calculator
+      - calculate emi
+      - i want to calculate emi
+      - loan calculator
+      - calculate loan
+
+    #contact us
+    # modified
+  - intent: fsib_contact_us
+    examples: |
+      - How to contact you?
+      - How can I get in touch?
+      - I need your contact information.
+      - What is the best way to reach you?
+      - How do I speak with someone?
+      - Please share your contact details
+      - What is your phone number?
+      - Is there a customer service number?
+      - Can I contact you by email?
+      - How do I send an email to you?
+      - Do you have a call center?
+      - i need to call you urgently.
+      - How can I talk to a representative?
+      - What's your support hotline number?
+      - Can I get in touch with a human representative?
+
+    #offshore banking
+    # hold for now ( anik )
+  - intent: fsib_offshore_banking
+    examples: |
+      - offshore banking
+      - what offshore banking benefits are available
+      - do you provide offshore banking facilities?
+      - mudaraba international banking account
+      - what is offshore banking
+      - Mudaraba Foreign Currency Term Deposit Account
+      - MFCTDA
+      - MIBA
+      - How can i get MIBA facility
+      - how to use MFCTDA account facility.
+      - export zone
+
+
+    #foreign corner
+    # hold for now (anik)
+  - intent: fsib_foreign_corner
+    examples: |
+      - what is fsib foreign corner in bank?
+      - foreign corner services
+      - what services are there for foreigners
+      - facilities for foreigners
+      - i am a bangladeshi citizen, i want to open an account in your bank.
+      - I have dual citizenship can i use this?
+      - fsib foreign corner?
+      - remittance support of your bank?
+      - remittance related queries?
+      - As an outsider can i open a foreign account?
+      - i live in abroad what are the options
+      - currently i am in abroad tell me about available products or facilities
+
+    #agent banking
+    # modified
+  - intent: fsib_agent_banking
+    examples: |
+      - What is agent banking?
+      - Can you explain banking agents?
+      - How does agent banking work in your bank?
+      - Who can qualify as a banking agent?
+      - What are the requirements to become an agent?
+      - What does it take to be a master agent in fsib?
+      - What are the eligibility criteria for a unit agent?
+      - What activities are allowed for banking agents?
+      - What actions are prohibited for agents in banking?
+      - How do I apply to become an agent of fsib?
+      - Where can I find the agent application form?
+      - How do I fill out an agent application for banking services?
+      - Can you guide me through the process of becoming an agent?
+      - show me the process of becoming an agent of FSIB PLC.
+      - I want to become an agent
+
+  #Tender
+
+  - intent: fsib_tender
+    examples: |
+      - tender
+      - what is tender
+      - tender services
+      - tender services of FSIB
+      - tender notice
+      - download tender 
+      - tender application
+
+  #digital banking
+  # modified
+  - intent: fsib_digital_banking
+    examples: |
+      - What is digital banking?
+      - Can you explain online banking services?
+      - What online services are available for banking?
+      - What are the internet banking services offered by your bank?
+      - How do apps and software enhance digital banking?
+      - What kind of digital banking facilities are provided?
+      - How can I use internet banking services?
+      - What applications are available for online banking in fsib plc?
+      - What are the advantages of apps in digital banking?
+      - Benefits of ibanking?
+      - What digital banking tools are available?
+      - Are there apps for digital banking in first security islami bank?
+      - Can I access banking services through apps?
+      - How do net banking and cloud services work together?
+      - What online platforms are available for banking in FSIB?
+      - Tell me about ibanking?
+      - How do I use net banking website for transactions?
+      - Do you provide virtual banking?
+  
+  - intent: fsib_digital_services_details
+    examples: |
+      - Can you tell me about [FSIB Cloud](digital_services)?
+      - What are the benefits of the [FirstCash](digital_services)?
+      - Give me details about the [DCloud](digital_services) service.
+      - What is the [Freedom](digital_services) about?
+      - How does the [SMS Banking](digital_services) feature work?
+      - Explain the features of the [Corporate Banking](digital_services).
+      - Tell me about [FSIB Cloud](digital_services).
+      - What is the purpose of the [FirstCash](digital_services)?
+      - Share details about the [DCloud](digital_services) service.
+      - What are the advantages of the [Freedom](digital_services)?
+      - Can you describe the [SMS Banking](digital_services)?
+      - How can I use [Corporate e-Banking](digital_services)?
+
+  
+  #tax
+
+  - intent: fsib_tax
+    examples: |
+      - tax
+      - tax document
+      - tax return
+      - tax return documents
+      - tax return form
+  
+  ## confusing 
+  # about fsib
+  - intent: fsib_about
+    examples: |
+      - When was FSIB established?
+      - i wanna know about FSIB PLC board of director.
+      - What is the mission and vision of FSIB?
+      - How has FSIB contributed to the banking sector in Bangladesh?
+      - What principles does FSIB follow as an Islamic bank?
+      - Can you provide a brief history of FSIB's growth and achievements?
+      - Who are the current board members of FSIB?
+      - What is the role of the board of directors at FSIB?
+      - How does the board of directors oversee FSIB's operations?
+      - Are the board members of FSIB involved in strategic decisions?
+      - Who are the senior management members at FSIB?
+      - What are the responsibilities of FSIB's senior management team?
+      - who are the board of directors?
+      - what are the story about fsib?
+      - How does the senior management contribute to FSIB's success?
+      - Can you name some of the key executives in FSIB's senior management?
+      - tell me about fsib.
+      - Give us summary about FSIB.
+      - What is the story behind this bank?
+      - board of directors of this bank?
+      - what is a shariah board?
+      - who are the members of the shariah board?
+      - can you tell me about the role of the shariah board?
+      - what does the shariah board do in your bank?
+      - who leads the shariah board in your organization?
+      - how does the shariah board ensure compliance with Islamic law?
+      - why is a shariah board important for an Islamic bank?
+      - shariah board of FSIB?
+      - what qualifications do members of the shariah board have?
+
+  ##
+  # asks question about the bot
+  - intent: bot_about
+    examples: |
+      - What are you?
+      - Who are you?
+      - What are your capabilities?
+      - Can you tell me about yourself?
+      - What kind of bot are you?
+      - What do you do?
+      - Can you describe yourself?
+      - What is your purpose?
+      - What is your function?
+      - Are you a chatbot?
+      - What can you do?
+      - Can you explain your features?
+      - What services do you provide?
+      - Who created you?
+      - Are you an AI?
+      - What is your role?
+      - Why are you here?
+      - Are you intelligent?
+      - Are you a virtual assistant?
+      - How do you work?
+      - Are you a machine?
+      - What are your specialties?
+   

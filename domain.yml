@@ -1,0 +1,966 @@
+version: "3.1"
+
+intents:
+  - open_account
+  - greetings
+  - goodbye
+  - fsib_card_info
+  - fsib_card_features
+  - fsib_card_eligibility
+  - fsib_card_application
+  - fsib_card_atm_network
+  - fsib_card_discounts
+  - fsib_card_support
+  #Fuad
+  - fsib_investment
+  - fsib_trading_mode
+  - fsib_partnership_mode
+  - fsib_leasing_mode
+  - fsib_quard
+  - fsib_services
+  - inter_bank_fund_transfer
+  - swift 
+  - utility_bill_payment
+  - e_gp_payment
+  - e_hajj
+  - locker_services
+  - tasdir
+  - fsib_branch
+  - fsib_atm
+  - fsib_crm
+  - fsib_collection_booth
+  - fsib_agent_outlet
+  - fsib_exchange_rate
+  - fsib_emi_calculator
+  - fsib_contact_us
+  - fsib_offshore_banking
+  - fsib_foreign_corner
+  - fsib_agent_banking
+  - fsib_location
+  - fsib_tender
+  - fsib_digital_banking
+  - fsib_cloud_banking
+  - fsib_first_cash
+  - fsib_dcloud
+  - fsib_freedom_account
+  - fsib_sms_banking
+  - fsib_corporate_banking
+  - fsib_tax
+  - fsib_digital_services_details
+  - fsib_about
+
+  #anik
+  - account_types
+  - mudaraba_savings_account
+  - mudaraba_term_deposit
+  - mudaraba_scheme_account
+  - mudaraba_general
+  - al_wadiah_account
+  - foreign_currency_account
+  - scheme_general
+  - mudaraba_savings_details_scheme
+  - al_wadiah_details_scheme
+  - mudaraba_scheme_account_details_scheme
+  - mudaraba_term_details_scheme
+  - foreign_currency_details_scheme
+  - praise_words
+  - student_account
+  - student_account_features_onkur
+  - student_account_eligibility_onkur
+  - student_onkur
+  - student_projonmo
+  - student_account_features_projonmo
+  - student_account_eligibility_projonmo
+  - family_account
+  - senior_citizen_account
+  - senior_citizen_account_features
+  - senior_citizen_account_eligibility
+  - fsib_deposit_accounts
+  - fsib_salary_account
+  - freedom_fsib_open_account
+  - fsib_organization_account
+  - fsib_women_account
+  - women_ghoroni
+  - women_mahiyasi
+  - lowincome_account
+  - marriage_account
+  - health_support_account
+  - bot_about
+  - chairman_info
+  - md_info
+  - cito_info
+  - committee_info
+
+
+
+#anik
+entities:
+  - account_type
+  - scheme_name
+  - digital_services
+
+slots:
+  
+  scheme_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: scheme_name
+
+  digital_services:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: digital_services
+    
+  
+actions:
+  - action_show_account_form  # Example of a custom action, if required
+  - action_mudaraba_savings_details
+  - action_al_wadiah_details
+  - action_mudaraba_scheme_account_details
+  - action_mudaraba_term_deposit_details
+  - action_foreign_currency_account_details
+  - action_digital_services
+responses:
+  
+
+  ##
+  # committee info
+  utter_committee_info:
+    - text: "All committee info are given below?"
+      buttons:
+      - title: "Executive Committee"
+        payload: "https://fsibplc.com/executive_committee.php"
+      - title: "Audit Committee"
+        payload: "https://fsibplc.com/audit_committee.php"
+      - title: "Risk Management Committee"
+        payload: "https://fsibplc.com/risk_management_committee.php"
+
+  ##
+  # cito sir info
+  utter_cito_info:
+    - text: |
+        Md. Mushfiqur Rahman, Chief Information Technology Officer of First Security Islami Bank PLC, is a visionary leader with expertise in IT Governance, Information Security, IT Service Management, and Digital Transformation. With extensive experience in the rapidly evolving ICT sector, he excels in strategic innovation, technology implementation, and operational excellence. A strong advocate for skill development and human resource empowerment, he is driven by the principles of resilience and wholehearted effort. His specialties include IT Operations, Information Security Architecture, ERP solutions, Cloud Computing, and Project Management, positioning him as a transformative force in advancing organizational growth and efficiency.
+  ##
+  # md sir info
+  utter_md_info:
+    - text: |
+        Mr. Syed Waseque Md Ali has been the Managing Director of First Security Islami Bank PLC since March 2015. With over 37 years of versatile banking experience, he started his career at IFIC Bank and later served at Dutch-Bangla Bank before joining FSIB in 2008. He holds a Bachelor's in Commerce and an MBA. Throughout his career, Mr. Ali has attended numerous local and international workshops on leadership, credit management, foreign trade, and product marketing. Highlights include the "Breakthrough Leadership" program in Malaysia (2015), FCI Factoring Workshop in Amsterdam (2017), and SIBOS 2019 in the UK. He is also a long-standing member of the Rotary Club of Dhaka North, having held several leadership roles, including President and Lieutenant Governor.
+  ##
+  # chairman sir info
+  utter_chairman_info:
+    - text: |
+        Mr. Mohammad Abdul Mannan, born in 1952, is the Chairman of First Security Islami Bank PLC and also chairs the Islamic Banks’ Consultative Forum (IBCF). He holds an MSS from the University of Dhaka and has extensive experience in Islamic banking, having served as Managing Director of Islami Bank Bangladesh PLC. He has received numerous accolades, including the Asian Banker CEO Leadership Achievement Award (2016) and the Islamic Banking Award (2013). Mr. Mannan has participated in prestigious leadership programs at institutions like INSEAD, Oxford, and Columbia and has spoken at major global conferences on Islamic banking. His expertise and contributions to the banking sector are widely recognized, alongside his notable publications on Islamic banking.
+
+  ##
+  # bot about
+  utter_bot_about:
+    - text: "I am Smart Connect, FSIB's chatbot. Do you need any help?"
+      buttons:
+      - title: "How to open an account?"
+        payload: "/open_account"
+      - title: "What types of account do you have?"
+        payload: "/account_types"
+    - text: "Muhtaram/Muhtarama, Assalamu Alaikum. I am Smart Connect your banking assistant from FSIB. How can I help you?"
+          
+
+  ##
+  # it's a bit complicated
+  # health care support account
+  utter_health_support_account:
+    - text: |    
+          The Niramoy Health Care Deposit Scheme by FSIB is designed to help individuals meet medical crises by providing financial support when needed the most. 
+          This scheme allows you to save for healthcare expenses, ensuring you have the necessary funds during emergencies or medical treatments.
+      buttons:
+      - title: "Niramoy"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php"
+      - title: "What to open the account?"
+        payload: "/open_account"
+      - title: "Do you need account for marriage support?"
+        payload: "marriage_account"
+      - title: "Account for housewives"
+        payload: "/fsib_women_account"
+
+  ##
+  # it's a bit complicated
+  # marriage account
+
+  utter_marriage_account:
+    - text: |
+          Shortage of money for marriage? FSIB Bondhon helps you solve the problems.
+      buttons:
+      - title: "Bondhon"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php"
+      - title: "Do you want to know how to open an account?"
+        payload: "/open_account"
+      - title: "Other account types?"
+        payload: "/account_types"
+
+  ##
+  # it's a bit complicated for logic
+  # low income people
+  utter_lowincome_account:
+    - text: | 
+        We offer Mehonoty savings account for people with lower income bracket of the country.
+      buttons: 
+      - title: "Mehonoty"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+      - title: "Are you a woman then click here"
+        payload: "/fsib_women_account"
+
+  ##
+  # fsib women account
+  utter_fsib_women_account:
+    - text: |
+        We offer two specialized accounts for women: Ghoroni and Mahiyasi. Which one would you prefer?
+      buttons:
+      - title: "Ghoroni"
+        payload: "/women_ghoroni"
+      - title: "Mahiyasi"
+        payload: "/women_mahiyasi"
+
+
+  utter_women_ghoroni:
+    - text: |
+        Griheni Deposit Scheme (Ghoroni) is especially for the women to inspire Women empowerment.
+      buttons:
+      - title: "Ghoroni"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php" 
+
+  utter_women_mahiyasi:
+    - text: |
+        The FSIB Mahiyasi Account is a Shariah-compliant, 1-year deposit scheme for Bangladeshi women, offering monthly profit payouts and additional benefits.
+      buttons:
+      - title: "Mahiyasi"
+        payload: "https://fsibplc.com/mudaraba_term_account.php"  
+  
+  ##
+  # contains redundant data in this intent
+  # fsib organization account
+  utter_fsib_organization_account:
+    - text: |
+        FSIB provides different types of accounts for organizations. The options are listed below.
+      buttons:
+      - title: "SND (Special Notice Deposit)"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+      - title: "Al-Wadiah (Non-Profit/Current Account)"
+        payload: "https://fsibplc.com/al_wadiah_account.php"
+      - title: "Mudaraba Term Deposit (FDR) Account"
+        payload: "https://fsibplc.com/mudaraba_term_account.php"
+  ##
+  # fisb salary account
+  utter_fsib_salary_account:
+    - text: |
+        The FSIB Mudarabah Salary Saving Account(Prapti) is designed for individuals earning a monthly salary of BDT 5,000 or more, offering attractive profit rates with a low balance requirement.  
+      buttons:
+      - title: "Want to know more?"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+      - title: "Want to open Prapti account?"
+        payload: "https://freedom.fsiblbd.com/eKYC/Home/Login?Data=OQaK5ZdB67jCYMZoqLdyr87JZhJ02VWKdzhwrS/Vh88=CZetfBc0ZuuFJZKhbnBfbQ=="
+  # suggested change deposit issue
+  utter_fsib_deposit_accounts:
+    - text: |
+        We offer mudaraba savings account as savings deposit and mudaraba term deposit as FDR. Click the below buttons for more info.
+      buttons:
+      - title: "Savings Deposit (Mudaraba Savings Account)"
+        payload: "/mudaraba_savings_account"
+      - title: "FDR (Mudaraba Term Deposit)"
+        payload: "/mudaraba_term_deposit"
+
+  utter_senior_citizen_account:
+    - text: |
+        The Probin Account is an FSIB service for senior citizens, offering higher profits and free services for financial ease and security.
+      buttons:
+      - title: "Features"
+        payload: "/senior_citizen_account_features"
+      - title: "Eligibility"
+        payload: "/senior_citizen_account_eligibility"  
+      - title: "More Details"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+
+  utter_senior_citizen_account_features:
+    - text: |
+        * Savings account for senior citizens aged 60 or above.
+        * Initial deposit: Tk. 5,000/-.
+        * Highest profit rate on deposits.
+        * Free VISA Debit Card.
+        * Free Cheque Book.
+        * Online, internet, and SMS banking facilities.
+        * 20% discount on locker services (where available).
+        * Access to FSIB Cloud apps and more.
+  
+  utter_senior_citizen_account_eligibility:
+   - text: |
+        * Minimum Age: 60 years.
+        * Citizen of Bangladesh.
+
+  utter_family_account:
+    - text: |
+        The Family Account is a joint account that allows family members to pool their resources and manage their finances together. It offers convenient features such as shared account management, online banking services, and more. These below ones are the best match for you.
+      buttons:
+      - title: "Bondhon "
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php"
+      - title: "Ghoroni"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php"
+      - title: "Sanchaye Shukh"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php"
+      - title: "Projonmo "
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+
+  utter_student_account:
+    - text: |
+        Onkur and projonmo are the student accounts offered by First Security Islami Bank (FSIB), designed to cater to the banking needs of students. This account provides convenient features such as easy account management, access to digital banking services, and minimal fees to support students in their financial activities.
+        To know more click the button below.
+      buttons:
+      - title: "Onkur"
+        payload: "/student_onkur"
+      - title: "Projonmo"
+        payload: "/student_projonmo"
+    
+  utter_student_onkur:
+    - text: "Click the below buttons for details."
+      buttons:
+      - title: "Features"
+        payload: "/student_account_features_onkur"
+      - title: "Eligibility"
+        payload: "/student_account_eligibility_onkur"
+      - title: "More Details"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+  
+
+  utter_student_account_features_onkur:
+    - text: |
+        * Free Cheque Book (1st book only)
+        * Highest provisional profit on deposit
+        * No account maintenance fees
+        * Free VISA Debit Card for 1st Year, 50% Waiver from 2nd Year
+        * Online banking facilities
+        * No minimum balance
+        * Minimum Initial deposit amount is only BDT 100/- only
+        * Internet Banking
+        * SMS Banking
+        * FSIB Cloud apps and many more…
+
+  utter_student_account_eligibility_onkur:
+    - text: |
+        * Any Bangladeshi student from Class One to Ten cannot open the account with anyone other than his/her parents.
+        * The student must open the account with one of their parents.
+  
+  utter_student_projonmo:
+    - text: "Click the below buttons for details."
+      buttons:
+      - title: "Features"
+        payload: "/student_account_features_projonmo"
+      - title: "Eligiblity"
+        payload: "/student_account_eligibility_projonmo"
+      - title: "More Details"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+
+  utter_student_account_features_projonmo:
+    - text: |
+        * Free Cheque Book (1st book only).
+        * Any amount above 100 BDT can be deposited and withdrawn.
+        * Highest profit rate on deposit.
+        * No account maintenance fees.
+        * Free VISA Debit Card for the 1st year; 50% waiver from the 2nd year.
+        * Online banking facilities.
+        * Internet banking services.
+        * SMS banking services.
+        * Minimum initial deposit amount: BDT 200. 
+  
+  utter_student_account_eligibility_projonmo:
+    - text: |
+        * Any Bangladeshi college/university-going student is eligible.
+        * Students over 18 years old can open the account with someone other than their parents.
+
+  utter_praise_words:
+    - text: "Thank you! I'm here to help you with any queries you may have."
+    - text: "If you need further help feel free to ask."
+    - text: "I'm glad I could help. Let me know if you have any other questions."
+
+  # fallback action
+  ##
+  utter_action_default_fallback:
+    - text: "Sorry, I didn't understand that. Did you mean any of those?"
+      buttons:
+      - title: "How to open an account?"
+        payload: "/open_account"
+      - title: "Account types offered by your bank?"
+        payload: "/account_types"
+      - title: "Deposit accounts of FSIB?"
+        payload: "/fsib_deposit_accounts"
+      - title: "Information about FSIB Card?"
+        payload: "/fsib_card_info"
+    - text: "Did you mean any of those?"
+      buttons:
+      - title: "How can I open a student account?"
+        payload: "/student_account"
+      - title: "Account for senior citizens?"
+        payload: "/senior_citizen_account"
+      - title: "Best options for a family person?"
+        payload: "/family_account"
+
+
+  utter_scheme_general:
+    - text: |
+        We have different schemes for our customers. Please click the below button for more information.
+      buttons:
+      - title: "Schemes of FSIB"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php"
+
+  utter_foreign_currency_account:
+    - text: |
+        A Foreign Currency Account at FSIB allows customers to hold and manage foreign currencies in compliance with Shariah principles.
+      buttons:
+      - title: "PFC"
+        payload: "https://fsibplc.com/foreign_account.php#pfc"
+      - title: "RFCD"
+        payload: "https://fsibplc.com/foreign_account.php#rfcd"
+      - title: "NFCD"
+        payload: "https://fsibplc.com/foreign_account.php#nfcd"
+      - title: "ERQ"
+        payload: "https://fsibplc.com/foreign_account.php#erq"
+      - title: "ERQ"
+        payload: "https://fsibplc.com/foreign_account.php#erq"
+      - title: "NITA"
+        payload: "https://fsibplc.com/foreign_account.php#nita"
+      - title: "Others"
+        payload: "https://fsibplc.com/foreign_account.php#others"
+      - title: "We also offer offshore banking want to know about it?"
+        payload: "/fsib_offshore_banking"
+      - title: "See the foreign corner of FSIB"
+        payload: "/fsib_foreign_corner"
+        
+  utter_al_wadiah_account:
+    - text: |
+        Al-Wadiah is a Shariah-compliant safekeeping where the bank uses depositor's funds with a guarantee of return, bearing all risks of loss.
+      buttons:
+      - title: "Current Deposit"
+        payload: "https://fsibplc.com/al_wadiah_account.php#current_deposit"
+      - title: "Shomman"
+        payload: "https://fsibplc.com/al_wadiah_account.php#shomman"
+      - title: "Morjada"
+        payload: "https://fsibplc.com/al_wadiah_account.php#morjada"
+        
+  utter_mudaraba_general:
+    - text: |
+        We have 3 different mudaraba accounts. Which one would you like to know about?
+      buttons: 
+      - title: "Mudaraba Savings Account"
+        payload: "/mudaraba_savings_account"
+      - title: "Mudaraba Term Deposit"
+        payload: "/mudaraba_term_deposit"
+      - title: "Mudaraba Scheme Account"
+        payload: "/mudaraba_scheme_account"
+
+  utter_mudaraba_scheme_account:
+    - text: |
+        It offers medium or long-term savings with a structured plan to the customers. 
+        The account holder can choose from a variety of schemes to meet their financial goals.
+      buttons:    
+      - title: "Niramoy"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#niramoy"
+      - title: "Agroshor"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#agroshor"
+      - title: "Durbar"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#durbar"
+      - title: "Ehsan"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#ehsan"
+      - title: "Bondhon"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#bondhon"
+      - title: "Ghoroni"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#ghoroni"
+      - title: "Haj"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#haj"
+      - title: "Musafir"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#musafir"
+      - title: "Sanchaye Shukh"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#sanchaye_shukh"
+      - title: "Merchant"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#merchant"
+      - title: "FSIB Care"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#fsib_care"
+      - title: "Cash Waqf"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php#cash_waqf"
+  utter_mudaraba_term_deposit:
+    - text: |
+        Our Mudaraba Term Deposit Account is a Shariah-compliant investment account where profits are 
+        shared between the depositor and the bank based on an agreed ratio.
+      buttons:
+      - title: "Mudaraba Term Deposit"
+        payload: "https://fsibplc.com/mudaraba_term_account.php"
+      - title: "Monthly Profit Scheme"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#monthly_profit_scheme"
+      - title: "FSIB Murobbi"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#fsib_murobbi"
+      - title: "Mahiyasi"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#mahiyasi"
+      - title: "FSIB Sanchay"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#fsib_sanchay"
+      - title: "Deposit Double Scheme"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#deposit_double_scheme"
+      - title: "Utshob"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#utshob"
+      - title: "Smart Deposit Double Scheme"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#smart_deposit_double_scheme"
+      - title: "Century"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#century"
+      - title: "Double Century"
+        payload: "https://fsibplc.com/mudaraba_term_account.php#double_century"
+
+  utter_mudaraba_savings_account:
+    - text: | 
+        The Mudaraba Savings Account is a Shariah-compliant account that offers profit-sharing based on the Islamic principle of Mudaraba.
+        It has various schemes to meet the financial needs of our customers.
+      buttons:
+      - title: "Savings"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+      - title: "Onkur"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php#onkur"
+      - title: "Projonmo"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php#projonmo"
+      - title: "Prapti"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php#prapti"
+      - title: "Probin"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php#probin"
+      - title: "Mehonoty"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php#mehonoty"
+      - title: "SND"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php#snd"
+      - title: "Smart Account"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php#smart_account"     
+  utter_account_types:
+    - text: >
+       We offer a variety of account types, each account is designed to meet specific financial needs and provides unique benefits to our customers.
+      buttons:
+      - title: "Mudaraba Savings Account"
+        payload: "https://fsibplc.com/mudaraba_savings_account.php"
+      - title: "Mudaraba Term Deposit"
+        payload: "https://fsibplc.com/mudaraba_term_account.php"
+      - title: "Mudaraba Scheme Account"
+        payload: "https://fsibplc.com/mudaraba_scheme_account.php"
+      - title: "Al-Wadiah Account"
+        payload: "https://fsibplc.com/al_wadiah_account.php"
+      - title: "Foreign Currency Account"
+        payload: "https://fsibplc.com/foreign_account.php"
+      - title: "Want to open any account?"
+        payload: "/open_account"
+  utter_open_account:
+    - text: To open a personal/joint account please visit one of our branch or sub-branch.
+      buttons:
+      - title: "Branch"
+        payload: "https://fsibplc.com/location_br.php"
+      - title: "Sub Branch"
+        payload: "https://fsibplc.com/sub_br_location.php"
+      - title: "Required Papers"
+        payload: "https://fsibplc.com/documents.php"
+      - title: "Now you can open personal/joint account from online"
+        payload: "/freedom_fsib_open_account"
+  ##
+  # freedom under open account added
+  utter_freedom_fsib_open_account:
+    - text: "Click the below buttons for opening your desired account."
+      buttons:
+      - title: "Personal Account"
+        payload: "https://freedom.fsiblbd.com/ekyc"
+      - title: "Joint Account"
+        payload: "https://freedom.fsiblbd.com/ekyc"
+
+
+  utter_greetings:
+    - text: "Hello! How can I assist you?"
+    - text: "Muhtaram/Muhtarama, Assalamu Alaikum. How can I help you?"
+    - text: "Muhtaram/Muhtarama, Assalamu Alaikum."
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+    - text: "Goodbye! Take care."
+    - text: "Goodbye! Stay safe."
+    - text: "Muhtaram/Muhtarama, take care."
+  
+  utter_fsib_card_info:
+    - text: "An FSIB card is a debit card issued by our bank in Bangladesh. It allows you to access your money conveniently through a wide network of ATMs and Point of Sale (POS) terminals. To know about the FSIB card in detail, please [click here](https://fsibplc.com/fsib_card.php)."
+      buttons:
+      - title: "Features"
+        payload: "/fsib_card_features"
+      - title: "Eligibility"
+        payload: "/fsib_card_eligibility"
+      - title: "Application Process"
+        payload: "/fsib_card_application"
+      - title: "ATM Network"
+        payload: "/fsib_card_atm_network"
+      - title: "Discounts & Offers"
+        payload: "/fsib_card_discounts"
+      - title: "Support"
+        payload: "/fsib_card_support"
+        
+
+  utter_fsib_card_features:
+    - text: |
+        The FSIB Card offers the following features:
+        * Cash withdrawal from FSIB and other bank ATMs
+        * Payment via 32,000+ POS in Bangladesh
+        * Discounts at hotels, restaurants, hospitals, and more
+        * Mobile top-up/recharge, balance inquiry, PIN change, mini statement
+        * SMS transaction alerts and 24/7 Call Center support
+
+  utter_fsib_card_eligibility:
+    - text: |
+        To be eligible for the FSIB Card, you must:
+        * Have a savings, current, or STD account
+        * Visit your branch to fill out an application form
+
+  utter_fsib_card_application:
+    - text: "You can apply for the FSIB Card by visiting your branch and filling out an application form. You will receive an SMS notification when your card is ready."
+
+  utter_fsib_card_atm_network:
+    - text: "You can use the FSIB Card at FSIB and all other banks' ATMs across Bangladesh."
+
+  utter_fsib_card_discounts:
+    - text: |
+        FSIB Cardholders enjoy discounts at hotels, restaurants, hospitals, and more.
+      
+        
+  utter_fsib_card_support:
+    - text: |
+        For FSIB Card support, you can contact our 24/7 Call Center:
+        * 16257
+        * 09666716257
+
+  utter_fsib_card_mobile_topup:
+    - text: "With the FSIB Card, you can recharge your mobile easily."
+
+  utter_fsib_card_balance_inquiry:
+    - text: "You can check your account balance using the FSIB Card."
+
+  utter_fsib_card_pin_change:
+    - text: "You can change your FSIB Card PIN anytime through our system."
+
+  utter_fsib_card_mini_statement:
+    - text: "FSIB Card allows you to access a mini statement for recent transactions."
+
+  utter_fsib_card_transaction_alert:
+    - text: "FSIB Card provides SMS alerts for all your transactions to keep you updated."
+  
+
+  #Location
+  utter_fsib_location:
+    - text: "To locate the nearest FSIB facility, please click the buttons below."
+      buttons:
+      - title: "Branch"
+        payload: "/fsib_branch"
+      - title: "Sub Branch"
+        payload: "/fsib_sub_branch"
+      - title: "ATM"
+        payload: "/fsib_atm"
+      - title: "CRM"
+        payload: "/fsib_crm"
+      - title: "Collection Booth"
+        payload: "/fsib_collection_booth"
+      - title: "Agent Outlet"
+        payload: "/fsib_agent_outlet"
+      - title: "Do you want to know about the availabe services?"
+        payload: "/fsib_services"
+
+  ## fuad main part
+  # Fuad
+  utter_fsib_investment:
+    - text: "The investment options available at FSIB are given below."
+      buttons:
+      - title: "Trading Mode"
+        payload: "/fsib_trading_mode"
+      - title: "Partnership Mode"
+        payload: "/fsib_partnership_mode"
+      - title: "Leasing Mode"
+        payload: "/fsib_leasing_mode"
+      - title: "Quard"
+        payload: "/fsib_quard"
+
+  utter_fsib_trading_mode:
+    - text: "To learn more about the trading modes at FSIB, please click the button below."
+      buttons:
+      - title: "Bai Mechanism"
+        payload: "https://fsibplc.com/investment_mode.php#bai_mechanism"
+
+  utter_fsib_partnership_mode:
+    - text: "To learn more about the partnership modes at FSIB, please click the button below."
+      buttons:
+      - title: "Share Mechanism"
+        payload: "https://fsibplc.com/investment_mode.php#share_mechanism"
+
+  utter_fsib_leasing_mode:
+    - text: "To learn more about the leasing modes at FSIB, please click the button below."
+      buttons:
+      - title: "Ijara Mechanism"
+        payload: "https://fsibplc.com/investment_mode.php#ijara_mechanism"
+
+  utter_fsib_quard:
+    - text: "To learn more about the Quard, please click the button below."
+      buttons:
+      - title: "Quard"
+        payload: "https://fsibplc.com/investment_mode.php#others"
+
+  #Fuad
+  utter_fsib_services:
+    - text: "FSIB provides a comprehensive suite of services tailored to meet your financial needs. Click the buttons below to explore our offerings."
+      buttons: 
+      - title: "Inter Bank Fund Transfer"
+        payload: "/inter_bank_fund_transfer"
+      - title: "SWIFT"
+        payload: "/swift"
+      - title: "Utility Bill Payment"
+        payload: "/utility_bill_payment"
+      - title: "E-GP Payment"
+        payload: "/e_gp_payment"
+      - title: "E-Hajj"
+        payload: "/e_hajj"
+      - title: "Locker Services"
+        payload: "/locker_services"
+      - title: "Tasdir"
+        payload: "/tasdir"
+      - title: "Do you want to know about our FSIB services location?"
+        payload: "/fsib_location"
+      - title: "You know about our online services?"
+        payload: "/fsib_digital_banking"
+
+  utter_inter_bank_fund_transfer:
+    - text: "FSIB provides RTGS, BEFTN and NPSB services. To learn more about Inter Bank Fund Transfer, please click the button below."
+      buttons:
+      - title: "IBFT"
+        payload: "https://fsibplc.com/ibft.php"
+
+  utter_swift:
+    - text: "To learn more about SWIFT, please click the button below."
+      buttons:
+      - title: "SWIFT"
+        payload: "https://fsibplc.com/swift.php"
+
+  utter_utility_bill_payment:
+    - text: "To learn more about Utility Bill Payment, please click the button below."
+      buttons:
+      - title: "Utility Bill Payment"
+        payload: "https://fsibplc.com/utility.php"
+
+  utter_e_gp_payment:
+    - text: "To learn more about E-GP Payment, please click the button below."
+      buttons:
+      - title: "E-GP Payment"
+        payload: "https://fsibplc.com/egp.php"
+
+  utter_e_hajj:
+    - text: "To learn more about E-Hajj, please click the button below."
+      buttons:
+      - title: "E-Hajj"
+        payload: "https://fsibplc.com/ehajj.php"
+
+  utter_locker_services:
+    - text: "To learn more about Locker Services, please click the button below."
+      buttons:
+      - title: "Locker Services"
+        payload: "https://fsibplc.com/locker.php"
+
+  utter_tasdir:
+    - text: "To learn more about Tasdir, please click the button below."
+      buttons:
+      - title: "Tasdir"
+        payload: "https://fsibplc.com/tasdir.php"
+
+  #Location
+  
+  utter_fsib_branch:
+    - text: "To find the nearest FSIB branch, please click the button below."
+      buttons:
+      - title: "Branch"
+        payload: "https://fsibplc.com/location_br.php"
+      - title: "Sub-Branch"
+        payload: "https://fsibplc.com/sub_br_location.php"
+
+  utter_fsib_atm:
+    - text: "To find the nearest FSIB ATM, please click the button below."
+      buttons:
+      - title: "ATM"
+        payload: "https://fsibplc.com/atm.php"
+
+  utter_fsib_crm:
+    - text: "To find the nearest FSIB CRM, please click the button below."
+      buttons:
+      - title: "CRM"
+        payload: "https://fsibplc.com/crm.php"
+
+  utter_fsib_collection_booth:
+    - text: "To find the nearest FSIB Collection Booth, please click the button below."
+      buttons:
+      - title: "Collection Booth"
+        payload: "https://fsibplc.com/collection_booth.php"
+
+  utter_fsib_agent_outlet:
+    - text: "To find the nearest FSIB Agent Outlet, please click the button below."
+      buttons:
+      - title: "Agent Outlet"
+        payload: "https://fsibplc.com/agent.php"
+
+  #Exchange Rate
+
+  utter_fsib_exchange_rate:
+    - text: "To know the current exchange rate, please click the button below."
+      buttons:
+      - title: "Exchange Rate"
+        payload: "https://fsibplc.com/foreign_exchange_rate.php"
+
+  #emi calculator
+
+  utter_fsib_emi_calculator:
+    - text: "To calculate your EMI, please click the button below."
+      buttons:
+      - title: "EMI Calculator"
+        payload: "https://fsibplc.com/loan_calculator.php"
+
+  #contact us
+
+  utter_fsib_contact_us:
+    - text: "To contact us, please click the button below."
+      buttons:
+      - title: "Contact Us"
+        payload: "https://fsibplc.com/contact.php"
+      - title: "Call Center"
+        payload: "https://fsibplc.com/call.php"
+
+  #offshore banking
+
+  utter_fsib_offshore_banking:
+    - text: "FSIB provides offshore banking services with attractive Shariah compliant tax free profit. To learn more about offshore banking, please click the button below."
+      buttons:
+      - title: "Offshore Banking"
+        payload: "https://fsibplc.com/offshore_banking.php"
+
+  #foreign corner
+
+  utter_fsib_foreign_corner:
+    - text: "FSIB provides various types of services to our coustomers in foreign countries. To learn more about the foreign corner, please click the button below."
+      buttons:
+      - title: "Foreign Corner"
+        payload: "https://fsibplc.com/foreign_corner.php"
+
+  #agent banking
+
+  utter_fsib_agent_banking:
+    - text: "FSIB provides agent banking services to our customers. It is a mini banking system looking exactly like a model branch where the following services such as Account Opening, Cash Deposit/withdrawal, BEFTN, BACH & RTGS etc. in limited scale (as per Bangladesh Bank guidelines) are provided. To learn more about agent banking, please click the button below."
+      buttons:
+      - title: "Agent Banking"
+        payload: "https://fsibplc.com/agentBanking.php"
+
+  #tender
+
+  utter_fsib_tender:
+    - text: "To know about the latest tender notices, please click the button below."
+      buttons:
+      - title: "Tender"
+        payload: "https://fsibplc.com/tender.php"
+
+  #digital banking
+
+  utter_fsib_digital_banking:
+    - text: "FSIB provides digital banking services to our customers. To learn more about the services and apps we provide, please click the buttons below."
+      buttons:
+      - title: "Cloud Banking"
+        payload: "/fsib_cloud_banking"
+      - title: "FirstCash"
+        payload: "/fsib_first_cash"
+      - title: "DCloud"
+        payload: "/fsib_dcloud"
+      - title: "Freedom Account"
+        payload: "/fsib_freedom_account"
+      - title: "SMS Banking"
+        payload: "/fsib_sms_banking"
+      - title: "Corporate Banking"
+        payload: "/fsib_corporate_banking"
+      - title: "Want to know more about our services?"
+        payload: "/fsib_services" 
+
+  utter_fsib_cloud_banking:
+    - text: "FSIB provides banking service over the internet. To learn more about cloud banking, please click the button below."
+      buttons:
+      - title: "Website"
+        payload: "https://cloud.fsiblbd.com/FSIBLCLOUD/login?returnUrl=%2F"
+      - title: "Learn More"
+        payload: "https://fsibplc.com/cloud.php"
+
+  utter_fsib_first_cash:
+    - text: "To avail the services of FSIB FirstCash, please click the button below."
+      buttons:
+      - title: "FirstCash"
+        payload: "https://fsiblbd.com/firstcash/index.php"
+
+  utter_fsib_dcloud:  
+    - text: "dCloud is an all-around digital Banking application of FSIB for banked and unbanked person of Bangladesh promoting Financial Inclusion and Cash-less Society. To learn more about dCloud, please click the button below."
+      buttons:
+      - title: "DCloud"
+        payload: "https://fsibplc.com/dcloud.php"
+
+  utter_fsib_freedom_account:
+    - text: "To open a FSIB bank account online, please click the button below."
+      buttons:
+      - title: "Freedom Account"
+        payload: "https://freedom.fsiblbd.com/ekyc"
+
+  utter_fsib_sms_banking:
+    - text: "To learn how to avail the services of FSIB SMS and mobile banking, please click the button below."
+      buttons:
+      - title: "SMS Banking"
+        payload: "https://fsibplc.com/smsbanking.php"
+
+  utter_fsib_corporate_banking: 
+    - text: "FSIB provides corporate banking services to our corporate clients. Use the buttons below to navigate."
+      buttons:
+      - title: "Corporate Banking"
+        payload: "https://cloud.fsiblbd.com/Corporate/login?returnUrl=%2F"
+      - title: "Learn More"
+        payload: "https://fsibplc.com/corporatebanking.php"
+
+  #tax
+
+  utter_fsib_tax:
+    - text: "To fillup the tax return document, please click the button below."
+      buttons:
+      - title: "Tax Return"
+        payload: "https://trdms.fsiblbd.com/trdms/f?p=100:9999:8855254520415:::::"
+
+  # fsib about
+  utter_fsib_about:
+    - text: "Details of First Security Islami Bank PLC."
+      buttons:
+      - title: "About FSIB PLC"
+        payload: "https://fsibplc.com/history.php"
+      - title: "Board of Directors"
+        payload: "https://fsibplc.com/boardOfDirectors.php"
+      - title: "Senior Management"
+        payload: "https://fsibplc.com/senior_management.php"
+      - title: "Shariah Board"
+        payload: "https://fsibplc.com/shariah_board.php"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+session_config:
+  session_expiration_time: 5
+  carry_over_slots_to_new_session: true

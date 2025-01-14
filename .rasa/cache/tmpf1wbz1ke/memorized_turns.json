@@ -1,0 +1,15 @@
+{
+  "lookup": {
+    "eJyLrq6NBQAEOAGx": "action_listen",
+    "eJwtjNEJwCAMBVdxgE7gKqWEVAMNaCwm9kfcvYH2793juH2uLcy70wOYjJvEML8BgpVi+KGwGom7Q6m7w+JoMdSRseOJoOmiSh5JbYhBJkMu+t9rHS9Tryjk": "action_mudaraba_scheme_account_details",
+    "eJydjVEKgCAQRK/iATqBV4mQTRcSdA137Ue8ewv5X/Q3MwzvrX0spp8VLwdeYiFr+hMcQUZrZkmRBUm/jbHqJ5JWsSa3ABV2cOwPzKgQXxqJCygQE895fJO8wP7btxt/MVoq": "action_listen",
+    "eJwtysEJgDAMQNFVMoATdBWRENuAARslSb2U7m5Bb//BX/tYoN/GD1IOuTRB/wKVKif4cYoH63ybs81HdDIS1FbIaCcMtoqFg+R09Hxw5TG2F8+fJNs=": "action_mudaraba_term_deposit_details",
+    "eJyVjUsKgDAMBa/SA3iCXkUkxDZgwH5oUjeld7egblzp7g0M8+bWJ9NyoQPQKadoTbsGRAxkzQ07i1IcbhUqw+E4UK0J1WPBFUGpBPCkyLuAuI0C9W/pdyInYX1Sfx+XExhzUWY=": "action_listen",
+    "eJwtysEJgDAMQNFVMoATdBWRENugARulSXsp3d2C3v6Dv/axQH8KN6TocmuA/gUqZQ7w4xJz1vlW4zIf0UkPkGuiQjuhURM9DBM7yWVo8eTMY2wvQRUmHg==": "action_mudaraba_savings_details",
+    "eJydjVEKgCAQBa/iATqBV4lYNl1qQbdw1R/x7gn1G0R/b2CYN7c+mXYmqoAu8yHWtHuAYCRrHgismWS4RSkNh2VgtiYWjwlXBMXKsil4yshBQd1Okfq3+lvlx99yAW6kUdg=": "action_listen",
+    "eJwtylEKgCAQRdGtuIBW4FYiBpleNZBjjBqEuPeE+rsH7tz65NpluClwkaTetS9IQ4R3P07JBTremmHjER0s3m3JILsSVzMoP7SiBDkzZT4Q0fvyAkP3Jjs=": "action_foreign_currency_account_details",
+    "eJydjUEKwzAMBL/iB/QF/koowiibRJDIQZYLweTvMbQ95VJ624FhdmjnI7Td8KLELlljaO9BmjbE8IFVikO7WwusO6IdPYYpG2RW4moG5YNGeJK1UOEFG87f6rdKYs5V/Vv74/d5ATDsVXs=": "action_listen",
+    "eJwtisEJwCAMAFdxgE7gKqWEoAEDGotJ24e4ewPt7467fa4tzHPQDZiMu8QwPwDBRjH8UlmNxN9LafjD4mqeKzyYGQtkMuSqoKlQo7WOFzzxIyE=": "action_al_wadiah_details",
+    "eJyLrq7VUaguKEoti09MLsnMz7NSqIYw4vMSc1OtFKCcnMziktQ8oNrS4tQioJrMPCC3BCidE1+emJKZmBGfklqSmJlTHF+cnJGam1pLnLEY2kmxIRYA4WJI4Q==": "action_listen"
+  }
+}

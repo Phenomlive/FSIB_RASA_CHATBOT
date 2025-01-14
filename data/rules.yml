@@ -1,0 +1,501 @@
+version: "3.1"
+
+rules:
+
+  # suggested change of deposit
+  - rule: Provide details of deposit accounts
+    steps:
+      - intent: fsib_deposit_accounts
+      - action: utter_fsib_deposit_accounts
+
+  - rule: Provide details of senior citizen account
+    steps:
+      - intent: senior_citizen_account
+      - action: utter_senior_citizen_account
+  
+  - rule: Provide features of senior citizen account
+    steps:
+      - intent: senior_citizen_account_features
+      - action: utter_senior_citizen_account_features
+
+  - rule: Provide eligiblity of senior citizen account
+    steps:
+      - intent: senior_citizen_account_eligibility
+      - action: utter_senior_citizen_account_eligibility
+
+  - rule: Provide details of family accounts
+    steps:
+      - intent: family_account
+      - action: utter_family_account
+  
+  - rule: Provide details of onkur student account
+    steps:
+      - intent: student_onkur
+      - action: utter_student_onkur
+    
+  - rule: Provide features of onkur
+    steps:
+      - intent: student_account_features_onkur
+      - action: utter_student_account_features_onkur
+  
+  - rule: Provide eligibility of onkur
+    steps:
+      - intent: student_account_eligibility_onkur
+      - action: utter_student_account_eligibility_onkur
+
+  - rule : Provide details of projonmo student account
+    steps:
+      - intent: student_projonmo
+      - action: utter_student_projonmo
+
+  - rule: Provide features of projonmo
+    steps:
+      - intent: student_account_features_projonmo
+      - action: utter_student_account_features_projonmo
+
+  - rule: Provide eligibility of projonmo
+    steps:
+      - intent: student_account_eligibility_projonmo
+      - action: utter_student_account_eligibility_projonmo 
+
+  - rule: Provide details of the student account
+    steps:
+      - intent: student_account
+      - action: utter_student_account
+      
+  - rule: praise words for the bot
+    steps:
+      - intent: praise_words
+      - action: utter_praise_words
+
+  - rule: Fallback rule
+    steps:
+      - intent: nlu_fallback
+      - action: utter_action_default_fallback
+
+  - rule: Provide details of Foreign currency account scheme
+    steps:
+      - intent: foreign_currency_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_foreign_currency_account_details
+      
+  - rule: Provide details of Mudaraba term deposit scheme
+    steps:
+      - intent: mudaraba_term_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_mudaraba_term_deposit_details
+
+  - rule: provide details of Mudaraba scheme account schemes
+    steps:
+      - intent: mudaraba_scheme_account_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_mudaraba_scheme_account_details
+
+  - rule: Provide details of an Al Wadiah Savings Scheme
+    steps:
+      - intent: al_wadiah_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"  # Ensures the slot is set
+      - action: action_al_wadiah_details
+
+  - rule: Provide details of a Mudaraba Savings Scheme
+    steps:
+      - intent: mudaraba_savings_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"  # Ensures the slot is set
+      - action: action_mudaraba_savings_details
+  - rule: all scheme general questions 
+    steps:
+      - intent: scheme_general
+      - action: utter_scheme_general
+  - rule: Provide info of foreign currency account
+    steps:
+      - intent: foreign_currency_account
+      - action: utter_foreign_currency_account
+  - rule: Provide info of al_wadiah account
+    steps:
+      - intent: al_wadiah_account
+      - action: utter_al_wadiah_account
+  - rule: all mudaraba accounts info in one place
+    steps:
+      - intent: mudaraba_general
+      - action: utter_mudaraba_general
+  - rule: provide info about mudaraba scheme account
+    steps:
+      - intent: mudaraba_scheme_account
+      - action: utter_mudaraba_scheme_account
+  - rule: information of mudaraba term deposit account
+    steps:
+      - intent: mudaraba_term_deposit
+      - action: utter_mudaraba_term_deposit
+  - rule: information of mudaraba savings account
+    steps:
+      - intent: mudaraba_savings_account
+      - action: utter_mudaraba_savings_account
+  - rule: User asks about account types
+    steps:
+      - intent: account_types
+      - action: utter_account_types
+
+  - rule: User asks about opening an account
+    steps:
+      - intent: open_account
+      - action: utter_open_account
+
+  - rule: User greets the bot
+    steps:
+      - intent: greetings
+      - action: utter_greetings
+
+  - rule: User says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: User asks about FSIB Card information
+    steps:
+      - intent: fsib_card_info
+      - action: utter_fsib_card_info
+
+  - rule: User selects FSIB Card features
+    steps:
+      - intent: fsib_card_features
+      - action: utter_fsib_card_features
+
+  - rule: User selects FSIB Card eligibility
+    steps:
+      - intent: fsib_card_eligibility
+      - action: utter_fsib_card_eligibility
+
+  - rule: User selects FSIB Card application process
+    steps:
+      - intent: fsib_card_application
+      - action: utter_fsib_card_application
+
+  - rule: User selects FSIB Card ATM network
+    steps:
+      - intent: fsib_card_atm_network
+      - action: utter_fsib_card_atm_network
+
+  - rule: User selects FSIB Card discounts
+    steps:
+      - intent: fsib_card_discounts
+      - action: utter_fsib_card_discounts
+
+  - rule: User selects FSIB Card support
+    steps:
+      - intent: fsib_card_support
+      - action: utter_fsib_card_support
+
+  - rule: User selects FSIB Card mobile top-up
+    steps:
+      - intent: fsib_card_mobile_topup
+      - action: utter_fsib_card_mobile_topup
+
+  - rule: User selects FSIB Card balance inquiry
+    steps:
+      - intent: fsib_card_balance_inquiry
+      - action: utter_fsib_card_balance_inquiry
+
+  - rule: User selects FSIB Card PIN change
+    steps:
+      - intent: fsib_card_pin_change
+      - action: utter_fsib_card_pin_change
+
+  - rule: User selects FSIB Card mini statement
+    steps:
+      - intent: fsib_card_mini_statement
+      - action: utter_fsib_card_mini_statement
+
+  - rule: User selects FSIB Card transaction alerts
+    steps:
+      - intent: fsib_card_transaction_alert
+      - action: utter_fsib_card_transaction_alert
+
+
+#Fuad
+#FSIB Investment
+  - rule: User asks about FSIB investment options
+    steps:
+      - intent: fsib_investment
+      - action: utter_fsib_investment
+
+  - rule: User asks about FSIB trading modes
+    steps:
+      - intent: fsib_trading_mode
+      - action: utter_fsib_trading_mode
+
+  - rule: User asks about FSIB partnership modes
+    steps:
+      - intent: fsib_partnership_mode
+      - action: utter_fsib_partnership_mode
+
+  - rule: User asks about FSIB leasing modes  
+    steps:
+      - intent: fsib_leasing_mode
+      - action: utter_fsib_leasing_mode
+
+  - rule: User asks about FSIB quard
+    steps:
+      - intent: fsib_quard
+      - action: utter_fsib_quard
+
+
+# fsib salary account
+  - rule: User asks about fsib salary account
+    steps:
+      - intent: fsib_salary_account
+      - action: utter_fsib_salary_account
+
+# fsib freedom under open account
+  - rule: Provide info about personal and joint account
+    steps:
+      - intent: freedom_fsib_open_account
+      - action: utter_freedom_fsib_open_account
+
+# fsib organization account
+  - rule: User asks about organizational accounts
+    steps:
+      - intent: fsib_organization_account
+      - action: utter_fsib_organization_account
+
+# fsib women account
+  - rule: User asks about women accounts
+    steps: 
+      - intent: fsib_women_account
+      - action: utter_fsib_women_account
+
+  - rule: Provide info about women ghoroni
+    steps:
+      - intent: women_ghoroni
+      - action: utter_women_ghoroni
+  
+  - rule: Provide info about women mahiyasi
+    steps:
+      - intent: women_mahiyasi
+      - action: utter_women_mahiyasi
+
+  - rule: User asks about lower income related account
+    steps:
+      - intent: lowincome_account
+      - action: utter_lowincome_account
+
+  - rule: User asks about marriage package
+    steps: 
+      - intent: marriage_account
+      - action: utter_marriage_account
+
+  - rule: User asks about health care support
+    steps: 
+      - intent: health_support_account
+      - action: utter_health_support_account
+  # fuad part of the project
+  - rule: User asks about FSIB locations
+    steps:
+      - intent: fsib_location
+      - action: utter_fsib_location
+
+  #Services
+  - rule: User asks about FSIB services
+    steps:
+      - intent: fsib_services
+      - action: utter_fsib_services
+
+  - rule: User asks about Inter Bank Fund Transfer
+    steps:
+      - intent: inter_bank_fund_transfer
+      - action: utter_inter_bank_fund_transfer
+
+  - rule: User asks about SWIFT
+    steps:
+      - intent: swift
+      - action: utter_swift
+
+  - rule: User asks about Utility Bill Payment
+    steps:
+      - intent: utility_bill_payment
+      - action: utter_utility_bill_payment
+
+  - rule: User asks about E-GP Payment
+    steps:
+      - intent: e_gp_payment
+      - action: utter_e_gp_payment
+
+  - rule: User asks about E-Hajj
+    steps:
+      - intent: e_hajj
+      - action: utter_e_hajj
+
+  - rule: User asks about Locker Services
+    steps:
+      - intent: locker_services
+      - action: utter_locker_services
+
+  - rule: User asks about Tasdir
+    steps:
+      - intent: tasdir
+      - action: utter_tasdir
+
+  #Location
+
+  - rule: User asks about FSIB Branch
+    steps:
+      - intent: fsib_branch
+      - action: utter_fsib_branch
+
+  - rule: User asks about FSIB ATM
+    steps:
+      - intent: fsib_atm
+      - action: utter_fsib_atm
+
+  - rule: User asks about FSIB CRM
+    steps:
+      - intent: fsib_crm
+      - action: utter_fsib_crm
+
+  - rule: User asks about FSIB Collection Booth
+    steps:
+      - intent: fsib_collection_booth
+      - action: utter_fsib_collection_booth
+
+  - rule: User asks about FSIB Agent Outlet
+    steps:
+      - intent: fsib_agent_outlet
+      - action: utter_fsib_agent_outlet
+
+  #Exchange Rate
+
+  - rule: User asks about Exchange Rate
+    steps:
+      - intent: fsib_exchange_rate
+      - action: utter_fsib_exchange_rate
+
+  #emi calculator
+
+  - rule: User asks about EMI Calculator
+    steps:
+      - intent: fsib_emi_calculator
+      - action: utter_fsib_emi_calculator
+
+  #contact us
+
+  - rule: User asks about contact us
+    steps:
+      - intent: fsib_contact_us
+      - action: utter_fsib_contact_us
+
+  #offshore banking
+
+  - rule: User asks about offshore banking
+    steps:
+      - intent: fsib_offshore_banking
+      - action: utter_fsib_offshore_banking
+
+  #foreign corner
+
+  - rule: User asks about foreign corner
+    steps:
+      - intent: fsib_foreign_corner
+      - action: utter_fsib_foreign_corner
+
+  #agent banking
+
+  - rule: User asks about agent banking
+    steps:
+      - intent: fsib_agent_banking
+      - action: utter_fsib_agent_banking
+
+  #tender
+
+  - rule: User asks about tender
+    steps:
+      - intent: fsib_tender
+      - action: utter_fsib_tender
+
+  #digital banking
+
+  - rule: User asks about digital banking
+    steps:
+      - intent: fsib_digital_banking
+      - action: utter_fsib_digital_banking
+
+  - rule: User asks about cloud banking
+    steps:
+      - intent: fsib_cloud_banking
+      - action: utter_fsib_cloud_banking
+
+  - rule: User asks about first cash
+    steps:
+      - intent: fsib_first_cash
+      - action: utter_fsib_first_cash
+
+  - rule: User asks about dcloud
+    steps:
+      - intent: fsib_dcloud
+      - action: utter_fsib_dcloud
+
+  - rule: User asks about freedom account
+    steps:
+      - intent: fsib_freedom_account
+      - action: utter_fsib_freedom_account
+
+  - rule: User asks about fsib sms banking
+    steps:
+      - intent: fsib_sms_banking
+      - action: utter_fsib_sms_banking
+
+  - rule: User asks about fsib corporate banking
+    steps:
+      - intent: fsib_corporate_banking
+      - action: utter_fsib_corporate_banking
+
+  #tax
+
+  - rule: User asks about tax
+    steps:
+      - intent: fsib_tax
+      - action: utter_fsib_tax
+
+  # cloud services in details
+  - rule: Provide details of digital services of fsib
+    steps:
+      - intent: fsib_digital_services_details
+      - slot_was_set:
+          - digital_services: "true"  # Ensures the slot is set
+      - action: action_digital_services
+
+  # fsib history about
+  - rule : User asks about fsib history
+    steps:
+      - intent: fsib_about
+      - action: utter_fsib_about
+
+  # fsib bot own about
+  - rule: User asks about the chatbot itself
+    steps:
+      - intent: bot_about
+      - action: utter_bot_about
+
+  # chairman sir info
+  - rule: User asks about chairman sir
+    steps: 
+      - intent: chairman_info
+      - action: utter_chairman_info
+  # md sir info
+  - rule: User asks about md sir
+    steps:
+      - intent: md_info
+      - action: utter_md_info
+  # cito sir info
+  - rule: User asks about chieft IT officer
+    steps:
+      - intent: cito_info
+      - action: utter_cito_info
+  # committee info
+  - rule: User asks about committee info
+    steps:
+      - intent: committee_info
+      - action: utter_committee_info

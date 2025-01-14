@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+  
+  - story: Provide details of Mudaraba Savings account Scheme
+    steps:
+      - intent: mudaraba_savings_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_mudaraba_savings_details
+
+  - story: Provide details of al wadiah account scheme
+    steps:
+      - intent: al_wadiah_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_al_wadiah_details
+
+  - story: Provide details of Mudaraba scheme account schemes
+    steps:
+      - intent: mudaraba_scheme_account_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_mudaraba_scheme_account_details
+  
+  - story: Provide details of Mudaraba term deposit scheme
+    steps:
+      - intent: mudaraba_term_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_mudaraba_term_deposit_details
+  
+  - story: Provide details of Foreign currency account scheme
+    steps:
+      - intent: foreign_currency_details_scheme
+      - slot_was_set:
+          - scheme_name: "true"
+      - action: action_foreign_currency_account_details
+  # fuad part
+  - story: User asks about digital services in details
+    steps:
+      - intent: digital_services
+      - slot_was_set:
+          - digital_services: "true"
+      - action: action_digital_services
+
+  # main story part begins from here
+  - story: student path
+    steps: 
+      - intent: student_account
+      - action: utter_student_account
+      - intent: open_account
+      - action: utter_open_account
+      
