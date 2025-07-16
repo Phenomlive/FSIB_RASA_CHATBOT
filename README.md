@@ -93,16 +93,6 @@ Follow these steps to set up the FSIB Rasa Chatbot locally:
 - `models/`: Stores trained Rasa models.
 - `index.html`: Sample web interface for the chatbot widget.
 
-## Contributing
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make changes and commit (`git commit -m "Add your feature"`).
-4. Push to your branch (`git push origin feature/your-feature`).
-5. Create a pull request.
-
-Please follow the Rasa contribution guidelines for code formatting (using `black`) and testing.[](https://github.com/RasaHQ/rasa)
-
 ## License
 This project is licensed under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for details.
 
